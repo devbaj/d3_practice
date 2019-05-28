@@ -36,7 +36,7 @@
 				.attr("transform", (d, i) => { return "translate(" + i * barWidth + ",0)"; });
 		
 		bar.append('rect')
-			.attr('y', d => { return d.value } )
+			.attr('y', d => { return y(d.value); } )
 			.attr('height', d => { return height - y(d.value); } )
 			.attr('width', barWidth - 1);
 		
